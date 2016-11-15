@@ -1,16 +1,16 @@
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-class config(object):
+class Config(object):
 	DEBUG = False
 	TESTING = False
 	CSRF_ENABLED = True
 	SECRET_KEY = 'need-to-change'
 
-class ProductionConfig(config):
+class ProductionConfig(Config):
 	DEBUG = False
 
-class StagingConfig(config):
+class StagingConfig(Config):
 	DEVELOPMENT = True
 	DEBUG = True
 
